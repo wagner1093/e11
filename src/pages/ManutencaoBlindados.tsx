@@ -1,7 +1,7 @@
 import { Search, Layers, Settings, Package, Droplets, Paintbrush, ShieldCheck, MessageCircle } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
-import heroImg from "@/assets/hero-manutencao.jpg";
+import heroImg from "@/assets/foto-fundo-04.png";
 
 const services = [
   { icon: Search, title: "Revisão da blindagem", desc: "Inspeção completa de todos os componentes balísticos do veículo." },
@@ -16,11 +16,12 @@ const ManutencaoBlindados = () => (
   <div>
     {/* Hero */}
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-      <img src={heroImg} alt="Manutenção de blindados" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-background/80" />
+      <img src={heroImg} alt="Manutenção de blindados" className="absolute inset-0 w-full h-full object-cover object-center" />
+      <div className="absolute inset-0 bg-black/75" />
       <AnimatedSection className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
-          Manutenção Especializada em <span className="gold-text">Veículos Blindados</span>
+        <h1 className="text-3xl md:text-5xl lg:text-[54px] font-display font-black uppercase tracking-tight text-white leading-[1.1]">
+          MANUTENÇÃO ESPECIALIZADA<br />
+          EM <span className="gold-text">VEÍCULOS BLINDADOS</span>
         </h1>
       </AnimatedSection>
     </section>
