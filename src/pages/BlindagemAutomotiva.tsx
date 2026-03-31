@@ -131,21 +131,38 @@ const BlindagemAutomotiva = () => (
       </div>
     </section>
 
-    {/* Highlights - modern */}
-    <section className="section-padding">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+    {/* Highlights - Premium Dynamic */}
+    <section className="section-padding relative">
+      {/* Subtle ambient light behind the cards */}
+      <div className="absolute inset-0 bg-primary/5 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] pointer-events-none" />
+      
+      <div className="container mx-auto relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {highlights.map((h, i) => (
-            <AnimatedSection key={h.title} delay={i * 0.15}>
-              <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${h.accent} border border-primary/20 p-8 text-center group hover:border-primary/50 transition-all duration-300`}>
-                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -translate-y-8 translate-x-8 group-hover:scale-150 transition-transform duration-500" />
-                <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                    <h.icon size={30} className="text-primary" />
+            <AnimatedSection key={h.title} delay={i * 0.15} className="h-full">
+              <div className="group relative h-full overflow-hidden rounded-3xl bg-card border border-border/60 hover:border-primary/50 p-8 md:p-10 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+                
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+                
+                {/* Moving blob */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-700" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                
+                <div className="relative z-10 flex flex-col items-center justify-between h-full">
+                  <div>
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:ring-4 ring-primary/10 transition-all duration-500">
+                      <h.icon size={36} className="text-primary group-hover:-rotate-6 transition-transform duration-500" />
+                    </div>
+                    <p className="text-xs font-semibold text-muted-foreground mb-3 uppercase tracking-[0.2em]">{h.title}</p>
                   </div>
-                  <p className="text-sm font-semibold text-muted-foreground mb-2 uppercase tracking-wide">{h.title}</p>
-                  <p className="text-primary font-display font-bold text-2xl">{h.desc}</p>
+                  <p className="text-primary font-display font-bold text-3xl mt-auto">
+                    {h.desc}
+                  </p>
                 </div>
+                
+                {/* Floating shine line at the top */}
+                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/50 transition-colors duration-700" />
               </div>
             </AnimatedSection>
           ))}
