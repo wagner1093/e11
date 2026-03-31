@@ -9,7 +9,7 @@ import galeria1 from "@/assets/galeria-1.png";
 import galeria2 from "@/assets/galeria-2.png";
 import galeria3 from "@/assets/galeria-3.png";
 import galeria4 from "@/assets/galeria-4.png";
-import galeria5 from "@/assets/galeria-5.dng";
+import galeria5 from "@/assets/galeria-5.jpg";
 import galeria6 from "@/assets/galeria-6.png";
 
 const galleryImages = [
