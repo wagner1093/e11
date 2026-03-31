@@ -3,6 +3,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import heroImg from "@/assets/foto-fundo-04.png";
 import imgManutencaoDetail from "@/assets/IMG_1436.png";
+import imgSeguradora from "@/assets/funilaria-blindados.jpeg";
 
 const services = [
   { icon: Search, title: "Revisão da blindagem", desc: "Inspeção completa de todos os componentes balísticos do veículo." },
@@ -90,7 +91,9 @@ const ManutencaoBlindados = () => (
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-charcoal to-card border border-border" />
+            <div className="aspect-[4/3] rounded-lg border border-border overflow-hidden relative shadow-2xl shadow-primary/5">
+              <img src={imgSeguradora} alt="Funilaria e oficina para blindados" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
           </AnimatedSection>
         </div>
       </div>
