@@ -4,7 +4,10 @@ import WhatsAppCTA from "@/components/WhatsAppCTA";
 import heroImg from "@/assets/hero-blindagem-new.jpg";
 import imgRoubo from "@/assets/roubo.jpg";
 import imgTabela from "@/assets/tabela-blindagem.jpg";
-import imgVidros from "@/assets/vidros-forever.jpg";
+import imgVidros from "@/assets/IMG_2459.png";
+import imgAco from "@/assets/IMG_8982.png";
+import imgManta from "@/assets/manta-balistica.jpg";
+import imgTensylon from "@/assets/tensylon-new.png";
 
 const pilaresDetail = [
   { icon: Shield, title: "Segurança", desc: "Uma proteção que assegura a sua tranquilidade em todas as situações, impedindo qualquer ameaça de comprometer a sua segurança." },
@@ -15,9 +18,9 @@ const pilaresDetail = [
 
 const componentes = [
   { icon: Eye, title: "Vidros Balísticos", desc: "Podem ser de policarbonato ou de SpallShield. Espessura varia de 21 até 18 mm.", img: imgVidros },
-  { icon: Layers, title: "Aço Balístico", desc: "INOX AISI 304L de 2,5 até 3 mm de espessura.", img: null },
-  { icon: Hexagon, title: "Manta Balística", desc: "Feita de Kevlar da DuPont. Pode variar de 8 até 12 camadas.", img: null },
-  { icon: Zap, title: "Tensylon", desc: "Polietileno de alta performance e ultra-alto peso molecular. 5 vezes mais leve que o aço balístico.", img: null },
+  { icon: Layers, title: "Aço Balístico", desc: "INOX AISI 304L de 2,5 até 3 mm de espessura.", img: imgAco },
+  { icon: Hexagon, title: "Manta Balística", desc: "Feita de Kevlar da DuPont. Pode variar de 8 até 12 camadas.", img: imgManta },
+  { icon: Zap, title: "Tensylon", desc: "Polietileno de alta performance e ultra-alto peso molecular. 5 vezes mais leve que o aço balístico.", img: imgTensylon },
 ];
 
 const highlights = [
