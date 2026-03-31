@@ -5,6 +5,17 @@ import heroImg from "@/assets/foto-fundo-04.png";
 import imgManutencaoDetail from "@/assets/IMG_1436.png";
 import imgSeguradora from "@/assets/funilaria-blindados.jpeg";
 
+import galeria1 from "@/assets/galeria-1.png";
+import galeria2 from "@/assets/galeria-2.png";
+import galeria3 from "@/assets/galeria-3.png";
+import galeria4 from "@/assets/galeria-4.png";
+import galeria5 from "@/assets/galeria-5.dng";
+import galeria6 from "@/assets/galeria-6.png";
+
+const galleryImages = [
+  galeria1, galeria2, galeria3, galeria4, galeria5, galeria6
+];
+
 const services = [
   { icon: Search, title: "Revisão da blindagem", desc: "Inspeção completa de todos os componentes balísticos do veículo." },
   { icon: Layers, title: "Troca de vidros delaminados", desc: "Substituição de vidros balísticos com perda de transparência." },
@@ -99,21 +110,43 @@ const ManutencaoBlindados = () => (
       </div>
     </section>
 
-    {/* Gallery */}
-    <section className="section-padding bg-secondary">
-      <div className="container mx-auto">
+    {/* Gallery - Modern Premium Masonry */}
+    <section className="section-padding bg-secondary relative">
+      <div className="container mx-auto relative z-10">
         <AnimatedSection className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Nossa Instalação</h2>
-          <div className="w-16 h-0.5 bg-primary mx-auto" />
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4 uppercase">
+            NOSSA <span className="gold-text">INSTALAÇÃO</span>
+          </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 mx-auto rounded-full" />
         </AnimatedSection>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <AnimatedSection key={i} delay={i * 0.08}>
-              <div className="aspect-square rounded-lg bg-gradient-to-br from-charcoal to-card border border-border hover:border-primary/30 transition-colors" />
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto auto-rows-fr">
+          {galleryImages.map((img, i) => (
+            <AnimatedSection 
+              key={i} 
+              delay={i * 0.15} 
+              className={i === 0 ? "md:col-span-2 md:row-span-2" : ""}
+            >
+              <div className={`group relative w-full h-full overflow-hidden rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-500 shadow-xl ${i === 0 ? "min-h-[300px] md:min-h-0" : "aspect-[4/3] md:aspect-square"}`}>
+                <img 
+                  src={img} 
+                  alt={`Galeria Instalação ${i+1}`} 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]" 
+                />
+                
+                {/* Efeito dark overlay suave que revela a imagem original no hover */}
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none" />
+                
+                {/* Borda interna premium iluminada no hover */}
+                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/40 rounded-2xl scale-105 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
+              </div>
             </AnimatedSection>
           ))}
         </div>
       </div>
+      
+      {/* Background glow radial */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[60%] bg-primary/5 blur-[120px] pointer-events-none rounded-full" />
     </section>
 
     {/* Differentiator */}
