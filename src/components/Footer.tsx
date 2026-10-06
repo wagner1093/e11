@@ -29,7 +29,7 @@ const Footer = () =>
           <div className="space-y-3 text-sm text-muted-foreground">
             <div className="flex items-center gap-2"><Phone size={14} className="text-primary" /> (11) 99532-7361</div>
             <div className="flex items-center gap-2"><Mail size={14} className="text-primary" /> Contato@e11blindagens.com.br</div>
-            <div className="flex items-start gap-2"><MapPin size={14} className="text-primary mt-0.5" /> Av. Washington Luís, 3395 - Santo Amaro, São Paulo - SP, 04627-000</div>
+            <div className="flex items-start gap-2"><MapPin size={14} className="text-primary mt-0.5" /> Av. Conselheiro Furtado, 2573 - Cremação, Belém - PA</div>
             <div className="flex items-center gap-2"><Clock size={14} className="text-primary" /> Seg-Sex: 8h às 18h</div>
           </div>
         </div>
@@ -56,7 +56,7 @@ const Footer = () =>
       {/* Google Maps */}
       <div className="mt-10">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8!2d-46.6!3d-23.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQXYuIFdhc2hpbmd0b24gTHXDrXMsIDMzOTU!5e0!3m2!1spt-BR!2sbr!4v1"
+          src="https://maps.google.com/maps?q=Avenida%20Conselheiro%20Furtado%2C%202573%20-%20Crema%C3%A7%C3%A3o%2C%20Bel%C3%A9m%20-%20PA&hl=pt-BR&z=16&output=embed"
           width="100%"
           height="200"
           style={{ border: 0, borderRadius: "8px" }}
